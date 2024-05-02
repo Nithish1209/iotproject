@@ -2,28 +2,373 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Download Resume</title>
+    <title>kathi</title>
     <style>
         .cta {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 2px;
+            font-size: 15px;
             transition: background-color 0.3s;
         }
 
         .cta:hover {
-            background-color: #45a049;
+            background-color: #65a045;
         }
     </style>
 </head>
 <body>
-    <h1>My Resume</h1>
-    <p>Click below to download my resume in PDF format:</p>
-    <a href="iotpy/area.py" download class="cta">Download Resume</a>
+    <h1> .............hyd .........................</h1>
+    <p>Click below to download in Python format:</p>
+    <a href="iotpy/area.py" download class="cta">area</a> <br>
+    <a href="/iotpy/" download class="cta">word count</a><br>
+    <a href="/iotpy/led.py" download class="cta">Led</a><br>
+    <a href="/iotpy/DHT.PY" ddownload class="cta">DHT</a><br>
+    <a href="/iotpy/pir.py"  download class="cta">PIR</a><br>
+    <a href="/iotpy/ultrasonic.py" download class="cta">ultrasonic</a><br>
+    <a href="/iotpy/fileled.py" download class="cta">File led </a><br>
+    <a href="/iotpy/twosswitch.py" download class="cta">2switches 2Led</a><br>
+    <a href="iotpy/sevenSegment.py" download class="cta">7segement</a><br>
+
+<br>
+<br>
+     <h1>COMMANDS </h1>
+ <pre> 
+      
+      
+ 
+    1. Start Raspberry Pi and try various Linux commands in command terminal  
+    window:  
+    i. ls, cd, touch, mv, rm, man, mkdir, rmdir, tar, gzip ii. cat, more, less, ps 
+    ls: Lists files and directories in the current directory. 
+    $ ls 
+    Desktop  Documents  Downloads  Music  Pictures  Videos 
+    cd: Changes the current directory. 
+    $ cd Documents 
+    touch: Creates an empty file. 
+    $ touch example.txt 
+    mv: Moves files or directories. 
+    $ mv example.txt Downloads/ 
+    rm: Removes files or directories. 
+    $ rm example.txt 
+    man: Displays the manual for a command. 
+    $ man ls 
+    mkdir: Creates a new directory. 
+    $ mkdir NewFolder 
+    rmdir: Removes an empty directory. 
+    $ rmdir NewFolder 
+    tar: Archives files into a tarball. 
+    $ tar -cvf archive.tar file1 file2 
+    gzip: Compresses files. 
+    $ gzip file.txt 
+    cat: Displays the contents of a file. 
+    $ cat file.txt 
+    more: Displays file contents one screen at a time. 
+    $ more file.txt 
+    less: Displays file contents with navigation capabilities. 
+    $ less file.txt 
+    ps: Displays information about running processes. 
+    $ ps 
+    2.Start Raspberry Pi and try various Linux commands in command terminal  
+    window : 
+    a. sudo, cron, chown, chgrp, ping etc. 
+    b. process-related commands 
+    a. System and Network Commands: 
+    sudo: Executes a command with superuser privileges. 
+    $ sudo apt update 
+    sudo: 
+    cron: Schedules tasks to run at specific times. 
+    $ crontab -e 
+    cron: (opens a text editor where you can specify cron jobs) 
+    chown: Changes the owner of a file or directory. 
+    $ chown user:group file.txt 
+    chgrp: Changes the group ownership of a file or directory. 
+    $ chgrp group file.txt 
+    ping: Tests connectivity to another network host. 
+    $ ping google.com 
+    ping: 
+    b. Process-related Commands: 
+    ps: Displays information about running processes. 
+    $ ps aux 
+    ps: 
+    top: Displays real-time information about system resource usage and running processes. 
+    $ top 
+    top: 
+    kill: Terminates a process. 
+    $ kill <process_id> 
+    killall: Terminates all instances of a particular process. 
+    $ killall firefox 
+    pstree: Displays a tree diagram of running processes. 
+    $ pstree 
+    pstree: 
+    PYTHON PROGRAMS 
+    1.Run a python program on Pi to Read your name and print Hello message with  
+    Name? 
+    # Importing necessary library 
+    import sys 
+     
+    # Function to read user input 
+    def read_name(): 
+        name = input("Enter your name: ") 
+        return name 
+     
+    # Function to print hello message with the name 
+    def print_hello(name): 
+        print("Hello, " + name + "!") 
+     
+    # Main function 
+    def main(): 
+        name = read_name() 
+        print_hello(name) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter your name: [You type your name here, for example: John] 
+    Hello, John! 
+     
+    2. Run a python program on Pi to Read two numbers and print their sum,  
+    difference, product and division? 
+    # Function to read two numbers from the user input 
+    def read_numbers(): 
+        num1 = float(input("Enter the first number: ")) 
+        num2 = float(input("Enter the second number: ")) 
+        return num1, num2 
+     
+    # Function to calculate and print sum, difference, product, and division 
+    def calculate_and_print(num1, num2): 
+        print("Sum:", num1 + num2) 
+        print("Difference:", num1 - num2) 
+        print("Product:", num1 * num2) 
+        if num2 != 0:  # Avoiding division by zero 
+            print("Division:", num1 / num2) 
+        else: 
+            print("Cannot divide by zero.") 
+     
+    # Main function 
+    def main(): 
+        num1, num2 = read_numbers() 
+        calculate_and_print(num1, num2) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter the first number: 10 
+    Enter the second number: 5 
+    Sum: 15.0 
+    Difference: 5.0 
+    Product: 50.0 
+    Division: 2.0 
+     
+    3. Run a python program on Pi to read a word and count characters in that word? 
+    # Function to read a word from the user input 
+    def read_word(): 
+        word = input("Enter a word: ") 
+        return word 
+     
+    # Function to count characters in the word 
+    def count_characters(word): 
+        return len(word) 
+     
+    # Main function 
+    def main(): 
+        word = read_word() 
+        character_count = count_characters(word) 
+        print("Number of characters in the word:", character_count) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter a word: hello 
+    Number of characters in the word: 5 
+     
+    4. Run a python program on Pi to Area of a given shape (rectangle, triangle  
+    and circle) reading shape and appropriate values from standard input? 
+    import math 
+     
+    # Function to calculate the area of a rectangle 
+    def rectangle_area(length, width): 
+        return length * width 
+     
+    # Function to calculate the area of a triangle 
+    def triangle_area(base, height): 
+        return 0.5 * base * height 
+     
+    # Function to calculate the area of a circle 
+    def circle_area(radius): 
+        return math.pi * radius**2 
+     
+    # Main function 
+    def main(): 
+        shape = input("Enter the shape (rectangle, triangle, or circle): ") 
+     
+        if shape == "rectangle": 
+            length = float(input("Enter the length of the rectangle: ")) 
+            width = float(input("Enter the width of the rectangle: ")) 
+            area = rectangle_area(length, width) 
+        elif shape == "triangle": 
+            base = float(input("Enter the base of the triangle: ")) 
+            height = float(input("Enter the height of the triangle: ")) 
+            area = triangle_area(base, height) 
+        elif shape == "circle": 
+            radius = float(input("Enter the radius of the circle: ")) 
+            area = circle_area(radius) 
+        else: 
+            print("Invalid shape entered.") 
+            return 
+     
+        print("The area of the", shape, "is:", area) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter the shape (rectangle, triangle, or circle): rectangle 
+    Enter the length of the rectangle: 5 
+    Enter the width of the rectangle: 3 
+    The area of the rectangle is: 15.0 
+     
+    5. Run a python program on Pi to demonstrate while loop? 
+    # Function to demonstrate a while loop 
+    def countdown(start): 
+        while start > 0: 
+            print(start) 
+            start -= 1 
+     
+    # Main function 
+    def main(): 
+        start_number = int(input("Enter a number to start the countdown from: ")) 
+        countdown(start_number) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter a number to start the countdown from: 5 
+    5 
+    4 
+    3 
+    2 
+    1 
+     
+    6. Run a python program on Pi to demonstrate for loop? 
+    # Function to demonstrate a for loop 
+    def print_numbers(limit): 
+        for i in range(1, limit + 1): 
+            print(i) 
+     
+    # Main function 
+    def main(): 
+        limit = int(input("Enter a limit: ")) 
+        print("Numbers from 1 to", limit, "are:") 
+        print_numbers(limit) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter a limit: 5 
+    Numbers from 1 to 5 are: 
+    1 
+    2 
+    3 
+    4 
+    5 
+     
+    7. Run a python program on Pi to demonstrate handle Divide by Zero  
+    Exception? 
+    # Function to perform division 
+    def perform_division(dividend, divisor): 
+        try: 
+            result = dividend / divisor 
+            print("Result of division:", result) 
+        except ZeroDivisionError: 
+            print("Error: Cannot divide by zero!") 
+     
+    # Main function 
+    def main(): 
+        dividend = float(input("Enter the dividend: ")) 
+        divisor = float(input("Enter the divisor: ")) 
+        perform_division(dividend, divisor) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Enter the dividend: 10 
+    Enter the divisor: 0 
+    Error: Cannot divide by zero! 
+     
+    8. Run a python program on Pi to print current time for 10 times with an  
+    interval of 10 seconds? 
+    import time 
+     
+    # Function to print current time for 10 times with an interval of 10 seconds 
+    def print_current_time(): 
+        for _ in range(10): 
+            current_time = time.strftime("%H:%M:%S", time.localtime()) 
+            print("Current time:", current_time) 
+            time.sleep(10)  # Sleep for 10 seconds 
+     
+    # Main function 
+    def main(): 
+        print_current_time() 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    OUTPUT: 
+    Current time: 14:32:10 
+    Current time: 14:32:20 
+    Current time: 14:32:30 
+    Current time: 14:32:40 
+    Current time: 14:32:50 
+    Current time: 14:33:00 
+    Current time: 14:33:10 
+    Current time: 14:33:20 
+    Current time: 14:33:30 
+    Current time: 14:33:40 
+     
+    9. Run a python program on Pi to print Read a file line by line and print the  
+    word count of each line? 
+    # Function to read a file line by line and print the word count of each line 
+    def print_word_count(filename): 
+        try: 
+            with open(filename, 'r') as file: 
+                for line_number, line in enumerate(file, start=1): 
+                    words = line.split() 
+                    word_count = len(words) 
+                    print(f"Line {line_number}: Word count = {word_count}") 
+        except FileNotFoundError: 
+            print("File not found.") 
+     
+    # Main function 
+    def main(): 
+        filename = input("Enter the name of the file: ") 
+        print_word_count(filename) 
+     
+    if __name__ == "__main__": 
+        main() 
+     
+    File_contents 
+    This is a sample sentence. 
+    Here is another line with more words. 
+    And finally, the last line. 
+     
+    OUTPUT: 
+    Enter the name of the file: example.txt 
+    Line 1: Word count = 5 
+    Line 2: Word count = 7 
+    Line 3: Word count = 5  
+
+ </pre>
+
 </body>
 </html>
